@@ -1,0 +1,12 @@
+python:
+  applicationPort: 8080
+  image: 'hmctsprod.azurecr.io/plum/test:latest'
+  ingressHost: plum-test-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
+  environment:
+  # keyVaults:
+  #   plum:
+  #     secrets:
+  #       - name: AppInsightsConnectionString
+  #         alias: APPLICATIONINSIGHTS_CONNECTION_STRING
+  # postgresql:
+  #   enabled: true
